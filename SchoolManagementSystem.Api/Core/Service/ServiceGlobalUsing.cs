@@ -1,0 +1,12 @@
+﻿global using AutoMapper;
+global using Domain.Contracts;
+global using Domain.Entities;
+global using ServiceAbstraction.Admin;
+global using Shared;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.IdentityModel.Tokens;
+global using ServiceAbstraction;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;
+global using System.Text;
