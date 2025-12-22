@@ -31,6 +31,7 @@
 		public Task<Teacher> GetTeacherByIdAsync(int id)
 		{
 			throw new NotImplementedException();
+
 		}
 	}
 }
