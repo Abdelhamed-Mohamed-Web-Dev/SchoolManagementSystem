@@ -27,5 +27,10 @@
 		{
 			throw new NotImplementedException();
 		}
+
+		public Task<Teacher> GetTeacherByIdAsync(int id)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

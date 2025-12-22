@@ -12,5 +12,7 @@ namespace ServiceAbstraction.Admin
 		Task<Student> GetAllStudentByIdAsync(int id);
 		Task<IEnumerable<Student>> GetTop10StudentsAsync();
 		// methods
+		// new
+		Task<Teacher> GetTeacherByIdAsync(int id);
 	}
 }
