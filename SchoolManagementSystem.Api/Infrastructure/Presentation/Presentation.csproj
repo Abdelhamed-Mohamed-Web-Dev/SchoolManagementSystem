@@ -7,9 +7,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\Core\Domain\Domain.csproj" />
 		<ProjectReference Include="..\..\Core\ServiceAbstraction\ServiceAbstraction.csproj" />
+		<ProjectReference Include="..\..\Core\Service\Service.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<FrameworkReference Include="Microsoft.AspNetCore.App"/>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 </Project>
