@@ -10,7 +10,9 @@ using Persistence.Contracts;
 using Presentation;
 using Service;
 using Service.AdminService;
+using Service.StudentService;
 using ServiceAbstraction;
+using ServiceAbstraction.student;
 using Services.Contracts;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
@@ -35,7 +37,8 @@ namespace SchoolMAnagementSystem.Api
 			builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 			builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 			builder.Services.AddScoped<IServiceManager, ServiceManger>();
-			builder.Services.AddControllers().AddApplicationPart(typeof(ControllerAssembly).Assembly);
+            builder.Services.AddScoped<IStudentService, StudentService>();
+            builder.Services.AddControllers().AddApplicationPart(typeof(ControllerAssembly).Assembly);
 			builder.Services.AddDbContext<MainContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSqlConnection")));
 			builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<MainContext>();
 
