@@ -1,20 +1,4 @@
 
-using Domain.Contracts;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Persistence;
-using Persistence.Contracts;
-using Presentation;
-using Service;
-using Service.AdminService;
-using ServiceAbstraction;
-using Services.Contracts;
-using System.Reflection.Metadata;
-using System.Threading.Tasks;
-
 namespace SchoolMAnagementSystem.Api
 {
 	public static class Program
@@ -57,6 +41,8 @@ namespace SchoolMAnagementSystem.Api
 			app.UseAuthorization();
 
 			app.MapControllers();
+
+			app.UseMiddleware<ExceptionHandlerMiddleware>();
 
 			app.Run();
 		}

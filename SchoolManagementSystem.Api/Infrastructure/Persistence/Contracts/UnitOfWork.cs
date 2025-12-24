@@ -3,7 +3,7 @@ using Domain.Entities;
 using Persistence;
 using System.Collections.Concurrent;
 
-namespace Services.Contracts
+namespace Persistence.Contracts
 {
 	public class UnitOfWork : IUnitOfWork
 	{

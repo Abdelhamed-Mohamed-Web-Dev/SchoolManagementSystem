@@ -10,6 +10,7 @@ namespace Domain.Entities
 		public string FullName { get; set; }
 		public DateTime DateOfBirth { get; set; }
 		public string Gender { get; set; }
+		public string Grade { get; set; }
 		public DateTime EnrollmentDate { get; set; }
 
 		public string UserId { get; set; }
