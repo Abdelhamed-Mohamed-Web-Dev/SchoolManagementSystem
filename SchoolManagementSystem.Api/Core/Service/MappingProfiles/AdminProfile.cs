@@ -11,13 +11,32 @@ namespace Service.MappingProfiles
 		{
 			CreateMap<Teacher, TeacherDto>()
 				.ForMember(s => s.Subjects, opt => opt.MapFrom(d => d.TeacherSubjects.Select(n => n.Subject.Name)))
+				.ForMember(s=> s.Email, opt => opt.MapFrom(d => d.User.Email)) 
 				.ReverseMap();
+
+
+
 			CreateMap<Student, StudentDto>()
 				.ForMember(s => s.Parents, opt => opt.MapFrom(d => d.Parent.FullName))
 				.ForMember(s => s.Classes, opt => opt.MapFrom(d => d.Class.Name))
+				.ForMember(s=> s.Email, opt => opt.MapFrom(d => d.User.Email))
 				.ReverseMap();
+
+
+
 			CreateMap<Parent, ParentDto>()
 				.ForMember(s => s.Students, opt => opt.MapFrom(d => d.Students.Select(n => n.FullName)))
+				.ForMember(s=> s.Email, opt => opt.MapFrom(d => d.User.Email))
+				.ReverseMap();
+
+			CreateMap<Class, ClassDto>()
+				.ForMember(d=>d.Grade,opt=>opt.MapFrom(s=>s.Grade.Name))
+
+				.ForMember(d=>d.Students,opt=>opt.MapFrom(s=>s.Students.Select(s=>s.FullName)))
+
+				.ForMember(d=>d.Subjects,opt=>opt.MapFrom(s=>s.TeacherSubjects.Select(s=>s.Subject.Name)))
+
+				.ForMember(d=>d.Exams,opt=>opt.MapFrom(s=>s.Exams.Select(s=>s.Name)))
 				.ReverseMap();
 
 			// Map create/update DTOs to Parent

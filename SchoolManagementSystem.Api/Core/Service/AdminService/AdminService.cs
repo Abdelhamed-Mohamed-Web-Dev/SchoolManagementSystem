@@ -9,6 +9,7 @@ namespace Service.AdminService
 		public async Task<ParentDto> GetParentByIdAsync(int id)
 		{
 			var parent = await unitOfWork.GetRepository<Parent, int>().GetAsync(id);
+
 			return parent is not null
 				? mapper.Map<ParentDto>(parent)
 				: throw new ParentNotFoundException(id);

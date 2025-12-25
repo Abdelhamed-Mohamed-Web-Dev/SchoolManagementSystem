@@ -1,40 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ServiceAbstraction;
 using ServiceAbstraction.student;
 using Shared;
 
 namespace Presentation.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class StudentsController : ControllerBase
+    public class StudentsController(IServiceManager serviceManager) :ApiBaseController
     {
-        private readonly IStudentService studentService;
-
-        public StudentsController(IStudentService studentService)
-        {
-            this.studentService = studentService;
-        }
-
+        
         // =========================
         // CRUD
         // =========================
 
         // GET: api/students
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<ActionResult<IEnumerable<StudentDto>>> GetAll()
         {
-            var students = await studentService.GetAllAsync();
-            return Ok(students);
+            var students = await serviceManager.StudentService.GetAllAsync();
+            return students.ToList();
         }
 
         // GET: api/students/5
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var student = await studentService.GetByIdAsync(id);
-
-            if (student == null)
-                return NotFound("Student not found");
+            var student = await serviceManager.StudentService.GetByIdAsync(id);
 
             return Ok(student);
         }
@@ -46,7 +36,7 @@ namespace Presentation.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var student = await studentService.CreateAsync(dto);
+            var student = await serviceManager.StudentService.CreateAsync(dto);
             return CreatedAtAction(nameof(GetById), new { id = student.Id }, student);
         }
 
@@ -54,7 +44,7 @@ namespace Presentation.Controllers
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var deleted = await studentService.DeleteAsync(id);
+            var deleted = await serviceManager.StudentService.DeleteAsync(id);
 
             if (!deleted)
                 return NotFound("Student not found");
@@ -70,7 +60,7 @@ namespace Presentation.Controllers
         [HttpGet("courses")]
         public async Task<IActionResult> GetAvailableCourses()
         {
-            var courses = await studentService.GetAvailableCoursesAsync();
+            var courses = await serviceManager.StudentService.GetAvailableCoursesAsync();
             return Ok(courses);
         }
 
@@ -78,7 +68,7 @@ namespace Presentation.Controllers
         [HttpGet("{studentId:int}/classes")]
         public async Task<IActionResult> GetClasses(int studentId)
         {
-            var enrollments = await studentService.GetClassesAsync(studentId);
+            var enrollments = await serviceManager.StudentService.GetClassesAsync(studentId);
             return Ok(enrollments);
         }
 
@@ -86,7 +76,7 @@ namespace Presentation.Controllers
         [HttpGet("{studentId:int}/attendance")]
         public async Task<IActionResult> GetMyAttendance(int studentId)
         {
-            var attendance = await studentService.GetMyAttendanceAsync(studentId);
+            var attendance = await serviceManager.StudentService.GetMyAttendanceAsync(studentId);
             return Ok(attendance);
         }
     }

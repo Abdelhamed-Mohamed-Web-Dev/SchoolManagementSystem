@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Domain.Contracts;
 using Domain.Entities;
+using Domain.Exceptions.NotFoundExceptions;
 using ServiceAbstraction.student;
 using Shared;
 
@@ -39,7 +40,7 @@ namespace Service.StudentService
                 .GetAsync(id);
 
             return student == null
-                ? null
+                ? throw new StudentNotFoundException(id)
                 : mapper.Map<StudentDto>(student);
         }
 
