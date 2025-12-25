@@ -1,0 +1,62 @@
+[
+  {
+    "StudentId": 1,
+    "ClassId": 1,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Present"
+  },
+  {
+    "StudentId": 2,
+    "ClassId": 3,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Present"
+  },
+  {
+    "StudentId": 3,
+    "ClassId": 5,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Absent"
+  },
+  {
+    "StudentId": 4,
+    "ClassId": 7,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Present"
+  },
+  {
+    "StudentId": 5,
+    "ClassId": 9,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Late"
+  },
+  {
+    "StudentId": 6,
+    "ClassId": 11,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Present"
+  },
+  {
+    "StudentId": 7,
+    "ClassId": 13,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Present"
+  },
+  {
+    "StudentId": 8,
+    "ClassId": 15,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Present"
+  },
+  {
+    "StudentId": 9,
+    "ClassId": 17,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Absent"
+  },
+  {
+    "StudentId": 10,
+    "ClassId": 19,
+    "Date": "2025-12-01T08:00:00",
+    "Status": "Present"
+  }
+]

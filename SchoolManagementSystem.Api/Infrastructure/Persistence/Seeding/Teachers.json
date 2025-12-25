@@ -1,0 +1,62 @@
+[
+  {
+    "FullName": "Ahmed Ali",
+    "Specialization": "Mathematics",
+    "HireDate": "2020-09-01T00:00:00",
+    "UserId": "d1a2b3c4-e5f6-47a8-9b0c-1d2e3f4a5b6c"
+  },
+  {
+    "FullName": "Layla Mahmoud",
+    "Specialization": "English Literature",
+    "HireDate": "2021-01-15T00:00:00",
+    "UserId": "j9k0l1m2-n3o4-45p6-q7r8-s9t0u1v2w3x4"
+  },
+  {
+    "FullName": "Khaled Nour",
+    "Specialization": "Physics",
+    "HireDate": "2019-08-20T00:00:00",
+    "UserId": "c7d8e9f0-g1h2-43i4-j5k6-l7m8n9o0p1q2"
+  },
+  {
+    "FullName": "Sara Khalil",
+    "Specialization": "Biology",
+    "HireDate": "2022-03-10T00:00:00",
+    "UserId": "v5w6x7y8-z9a0-41b2-c3d4-e5f6g7h8i9j0"
+  },
+  {
+    "FullName": "Tarek Zidane",
+    "Specialization": "Chemistry",
+    "HireDate": "2018-11-05T00:00:00",
+    "UserId": "o3p4q5r6-s7t8-49u0-v1w2-x3y4z5a6b7c8"
+  },
+  {
+    "FullName": "Yasmin Rady",
+    "Specialization": "History",
+    "HireDate": "2021-08-01T00:00:00",
+    "UserId": "h1i2j3k4-l5m6-47n8-o9p0-q1r2s3t4u5v6"
+  },
+  {
+    "FullName": "Mahmoud Ghaleb",
+    "Specialization": "Computer Science",
+    "HireDate": "2020-12-12T00:00:00",
+    "UserId": "a9b0c1d2-e3f4-45g6-h7i8-j9k0l1m2n3o4"
+  },
+  {
+    "FullName": "Mariam Shaker",
+    "Specialization": "Art",
+    "HireDate": "2023-01-05T00:00:00",
+    "UserId": "t7u8v9w0-x1y2-43z4-a5b6-c7d8e9f0g1h2"
+  },
+  {
+    "FullName": "Hassan Bakr",
+    "Specialization": "Geography",
+    "HireDate": "2017-09-15T00:00:00",
+    "UserId": "o5p6q7r8-s9t0-41u2-v3w4-x5y6z7a8b9c0"
+  },
+  {
+    "FullName": "Jana Farid",
+    "Specialization": "Physical Education",
+    "HireDate": "2022-09-01T00:00:00",
+    "UserId": "h3i4j5k6-l7m8-49n0-o1p2-q3r4s5t6u7v8"
+  }
+]

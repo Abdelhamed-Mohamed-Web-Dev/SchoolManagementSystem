@@ -8,7 +8,7 @@ namespace Domain.Entities
 	{
 		public string Name { get; set; } 
 
-		public ICollection<TeacherSubject> TeacherSubjects { get; set; } = new List<TeacherSubject>();
-		public ICollection<Exam> Exams { get; set; } = new List<Exam>();
+		public ICollection<TeacherSubject> TeacherSubjects { get; set; } 
+		public ICollection<Exam> Exams { get; set; }
 	}
 }

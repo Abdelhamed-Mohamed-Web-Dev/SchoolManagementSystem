@@ -1,0 +1,62 @@
+[
+  {
+    "StudentId": 1,
+    "ExamId": 1,
+    "GradeId": 1,
+    "Score": 85
+  },
+  {
+    "StudentId": 2,
+    "ExamId": 3,
+    "GradeId": 2,
+    "Score": 92
+  },
+  {
+    "StudentId": 3,
+    "ExamId": 4,
+    "GradeId": 3,
+    "Score": 45
+  },
+  {
+    "StudentId": 4,
+    "ExamId": 5,
+    "GradeId": 4,
+    "Score": 78
+  },
+  {
+    "StudentId": 5,
+    "ExamId": 6,
+    "GradeId": 5,
+    "Score": 60
+  },
+  {
+    "StudentId": 6,
+    "ExamId": 7,
+    "GradeId": 6,
+    "Score": 88
+  },
+  {
+    "StudentId": 7,
+    "ExamId": 8,
+    "GradeId": 7,
+    "Score": 55
+  },
+  {
+    "StudentId": 8,
+    "ExamId": 9,
+    "GradeId": 8,
+    "Score": 40
+  },
+  {
+    "StudentId": 9,
+    "ExamId": 10,
+    "GradeId": 9,
+    "Score": 95
+  },
+  {
+    "StudentId": 10,
+    "ExamId": 1,
+    "GradeId": 10,
+    "Score": 72
+  }
+]

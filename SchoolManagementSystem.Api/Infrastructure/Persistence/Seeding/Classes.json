@@ -1,0 +1,122 @@
+[
+  {
+    "Name": "Class 1-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 1
+  },
+  {
+    "Name": "Class 1-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 1
+  },
+  {
+    "Name": "Class 2-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 2
+  },
+  {
+    "Name": "Class 2-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 2
+  },
+  {
+    "Name": "Class 3-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 3
+  },
+  {
+    "Name": "Class 3-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 3
+  },
+  {
+    "Name": "Class 4-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 4
+  },
+  {
+    "Name": "Class 4-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 4
+  },
+  {
+    "Name": "Class 5-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 5
+  },
+  {
+    "Name": "Class 5-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 5
+  },
+  {
+    "Name": "Class 6-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 6
+  },
+  {
+    "Name": "Class 6-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 6
+  },
+  {
+    "Name": "Class 7-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 7
+  },
+  {
+    "Name": "Class 7-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 7
+  },
+  {
+    "Name": "Class 8-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 8
+  },
+  {
+    "Name": "Class 8-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 8
+  },
+  {
+    "Name": "Class 9-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 9
+  },
+  {
+    "Name": "Class 9-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 9
+  },
+  {
+    "Name": "Class 10-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 10
+  },
+  {
+    "Name": "Class 10-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 10
+  },
+  {
+    "Name": "Class 11-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 11
+  },
+  {
+    "Name": "Class 11-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 11
+  },
+  {
+    "Name": "Class 12-A",
+    "AcademicYear": "2024/2025",
+    "GradeId": 12
+  },
+  {
+    "Name": "Class 12-B",
+    "AcademicYear": "2024/2025",
+    "GradeId": 12
+  }
+]

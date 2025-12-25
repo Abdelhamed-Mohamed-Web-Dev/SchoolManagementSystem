@@ -1,0 +1,242 @@
+[
+  {
+    "Id": "d1a2b3c4-e5f6-47a8-9b0c-1d2e3f4a5b6c",
+    "Email": "ahmed.ali@example.com",
+    "UserName": "AhmedAli",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201012345678",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "f7g8h9i0-j1k2-43l4-m5n6-o7p8q9r0s1t2",
+    "Email": "mona.amr@example.com",
+    "UserName": "MonaAmr",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201112223334",
+    "Role": "Student"
+  },
+  {
+    "Id": "u3v4w5x6-y7z8-49a0-b1c2-d3e4f5g6h7i8",
+    "Email": "omar.hassan@example.com",
+    "UserName": "OmarHassan",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201223334445",
+    "Role": "Parent"
+  },
+  {
+    "Id": "j9k0l1m2-n3o4-45p6-q7r8-s9t0u1v2w3x4",
+    "Email": "layla.mahmoud@example.com",
+    "UserName": "LaylaMahmoud",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201554445556",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "y5z6a7b8-c9d0-41e2-f3g4-h5i6j7k8l9m0",
+    "Email": "youssef.ibrahim@example.com",
+    "UserName": "YoussefIbrahim",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201099988877",
+    "Role": "Student"
+  },
+  {
+    "Id": "n1o2p3q4-r5s6-47t8-u9v0-w1x2y3z4a5b6",
+    "Email": "fatima.zahra@example.com",
+    "UserName": "FatimaZahra",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201177766655",
+    "Role": "Parent"
+  },
+  {
+    "Id": "c7d8e9f0-g1h2-43i4-j5k6-l7m8n9o0p1q2",
+    "Email": "khaled.nour@example.com",
+    "UserName": "KhaledNour",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201255544433",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "r3s4t5u6-v7w8-49x0-y1z2-a3b4c5d6e7f8",
+    "Email": "nour.elabd@example.com",
+    "UserName": "NourElabd",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201511122233",
+    "Role": "Student"
+  },
+  {
+    "Id": "g9h0i1j2-k3l4-45m6-n7o8-p9q0r1s2t3u4",
+    "Email": "mostafa.fayed@example.com",
+    "UserName": "MostafaFayed",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201022233344",
+    "Role": "Parent"
+  },
+  {
+    "Id": "v5w6x7y8-z9a0-41b2-c3d4-e5f6g7h8i9j0",
+    "Email": "sara.khalil@example.com",
+    "UserName": "SaraKhalil",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201133344455",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "k1l2m3n4-o5p6-47q8-r9s0-t1u2v3w4x5y6",
+    "Email": "hany.saad@example.com",
+    "UserName": "HanySaad",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201244455566",
+    "Role": "Student"
+  },
+  {
+    "Id": "z7a8b9c0-d1e2-43f4-g5h6-i7j8k9l0m1n2",
+    "Email": "amira.tarek@example.com",
+    "UserName": "AmiraTarek",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201566677788",
+    "Role": "Parent"
+  },
+  {
+    "Id": "o3p4q5r6-s7t8-49u0-v1w2-x3y4z5a6b7c8",
+    "Email": "tarek.zidane@example.com",
+    "UserName": "TarekZidane",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201088899900",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "d9e0f1g2-h3i4-45j6-k7l8-m9n0o1p2q3r4",
+    "Email": "habiba.said@example.com",
+    "UserName": "HabibaSaid",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201100011122",
+    "Role": "Student"
+  },
+  {
+    "Id": "s5t6u7v8-w9x0-41y2-z3a4-b5c6d7e8f9g0",
+    "Email": "mohamed.osman@example.com",
+    "UserName": "MohamedOsman",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201211122233",
+    "Role": "Parent"
+  },
+  {
+    "Id": "h1i2j3k4-l5m6-47n8-o9p0-q1r2s3t4u5v6",
+    "Email": "yasmin.rady@example.com",
+    "UserName": "YasminRady",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201522233344",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "w7x8y9z0-a1b2-43c4-d5e6-f7g8h9i0j1k2",
+    "Email": "ibrahim.salem@example.com",
+    "UserName": "IbrahimSalem",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201033344455",
+    "Role": "Student"
+  },
+  {
+    "Id": "l3m4n5o6-p7q8-49r0-s1t2-u3v4w5x6y7z8",
+    "Email": "dina.moussa@example.com",
+    "UserName": "DinaMoussa",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201144455566",
+    "Role": "Parent"
+  },
+  {
+    "Id": "a9b0c1d2-e3f4-45g6-h7i8-j9k0l1m2n3o4",
+    "Email": "mahmoud.ghaleb@example.com",
+    "UserName": "MahmoudGhaleb",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201255566677",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "p5q6r7s8-t9u0-41v2-w3x4-y5z6a7b8c9d0",
+    "Email": "salma.helmy@example.com",
+    "UserName": "SalmaHelmy",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201577788899",
+    "Role": "Student"
+  },
+  {
+    "Id": "e1f2g3h4-i5j6-47k8-l9m0-n1o2p3q4r5s6",
+    "Email": "zeyad.reda@example.com",
+    "UserName": "ZeyadReda",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201011100099",
+    "Role": "Parent"
+  },
+  {
+    "Id": "t7u8v9w0-x1y2-43z4-a5b6-c7d8e9f0g1h2",
+    "Email": "mariam.shaker@example.com",
+    "UserName": "MariamShaker",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201122211100",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "i3j4k5l6-m7n8-49o0-p1q2-r3s4t5u6v7w8",
+    "Email": "adam.essam@example.com",
+    "UserName": "AdamEssam",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201233322211",
+    "Role": "Student"
+  },
+  {
+    "Id": "z9a0b1c2-d3e4-45f6-g7h8-i9j1k1l2m3n4",
+    "Email": "reem.nasr@example.com",
+    "UserName": "ReemNasr",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201544433322",
+    "Role": "Parent"
+  },
+  {
+    "Id": "o5p6q7r8-s9t0-41u2-v3w4-x5y6z7a8b9c0",
+    "Email": "hassan.bakr@example.com",
+    "UserName": "HassanBakr",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201055544433",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "d1e2f3g4-h5i6-47j8-k9l0-m1n2o3p4q5r6",
+    "Email": "rana.gamal@example.com",
+    "UserName": "RanaGamal",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201166655544",
+    "Role": "Student"
+  },
+  {
+    "Id": "s7t8u9v0-w1x2-43y4-z5a6-b7c8d9e0f1g2",
+    "Email": "ali.soliman@example.com",
+    "UserName": "AliSoliman",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201277766655",
+    "Role": "Parent"
+  },
+  {
+    "Id": "h3i4j5k6-l7m8-49n0-o1p2-q3r4s5t6u7v8",
+    "Email": "jana.farid@example.com",
+    "UserName": "JanaFarid",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201588877766",
+    "Role": "Teacher"
+  },
+  {
+    "Id": "w9x0y1z2-a3b4-45c6-d7e8-f9g0h1i2j3k4",
+    "Email": "karim.fouad@example.com",
+    "UserName": "KarimFouad",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201099988877",
+    "Role": "Student"
+  },
+  {
+    "Id": "l5m6n7o8-p9q0-41r2-s3t4-u5v6w7x8y9z0",
+    "Email": "farah.hashem@example.com",
+    "UserName": "FarahHashem",
+    "Password": "P@ssword123",
+    "PhoneNumber": "+201100099988",
+    "Role": "Parent"
+  }
+]

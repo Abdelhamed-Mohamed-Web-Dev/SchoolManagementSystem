@@ -73,6 +73,7 @@ namespace SchoolMAnagementSystem.Api
 			// Call Initializer 
 			// Initialization "Users"
 			await initDb.InitializeIdentityAsync();
+			await initDb.InitializeAsync();
 		}
 
 	}

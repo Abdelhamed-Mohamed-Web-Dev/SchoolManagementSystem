@@ -12,15 +12,15 @@ namespace Domain.Entities
 		public int PassScore { get; set; }
 
 		public int SubjectId { get; set; }
-		public Subject Subject { get; set; } = new Subject();
+		public Subject Subject { get; set; } 
 
 		public int ClassId { get; set; }
-		public Class Class { get; set; } = new Class();
+		public Class Class { get; set; }
 
 		public int GradeId { get; set; }
-		public Grade Grade { get; set; } = new();
+		public Grade Grade { get; set; } 
 
-		public ICollection<GradeResult> GradeResults { get; set; } = new List<GradeResult>();
+		public ICollection<GradeResult> GradeResults { get; set; } 
 	}
 
 }

@@ -92,7 +92,7 @@ namespace Service.StudentService
 
             var studentClasses = classes
                 .Where(e => e.Students.Any(s=>s.Id == studentId));
-            ////////////////////////////////////////// mapping profile for class nedded
+            ////////////////////////////////////////// mapping profile for class needed
             return mapper.Map<IEnumerable<ClassDto>>(studentClasses);
         }
 

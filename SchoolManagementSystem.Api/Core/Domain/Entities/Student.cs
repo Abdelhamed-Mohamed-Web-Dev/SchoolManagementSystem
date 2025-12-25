@@ -22,10 +22,10 @@ namespace Domain.Entities
 		public Parent Parent { get; set; }
 
 		public int ClassId { get; set; }
-		public Class Class { get; set; } = new();
+		public Class Class { get; set; } 
 
-		public ICollection<Attendance> Attendances { get; set; } = new List<Attendance>();
-		public ICollection<GradeResult> GradeResults { get; set; } = new List<GradeResult>();
+		public ICollection<Attendance> Attendances { get; set; } 
+		public ICollection<GradeResult> GradeResults { get; set; }
 	}
 
 }

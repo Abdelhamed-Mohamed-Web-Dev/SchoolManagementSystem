@@ -7,13 +7,13 @@ namespace Domain.Entities
 	public class GradeResult : BaseEntity<int>
 	{
 		public int ExamId { get; set; }
-		public Exam Exam { get; set; } = new Exam();
+		public Exam Exam { get; set; }
 
 		public int StudentId { get; set; }
-		public Student Student { get; set; } = new Student();
+		public Student Student { get; set; }
 
 		public int GradeId { get; set; }
-		public Grade Grade { get; set; } = new Grade();
+		public Grade Grade { get; set; } 
 
 		public int Score { get; set; }
 	}

@@ -1,0 +1,92 @@
+[
+  {
+    "Name": "Midterm Math Exam",
+    "ExamDate": "2025-01-15T09:00:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 1,
+    "GradeId": 1,
+    "ClassId": 1
+  },
+  {
+    "Name": "English Vocabulary Quiz",
+    "ExamDate": "2025-01-16T10:30:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 2,
+    "GradeId": 1,
+    "ClassId": 1
+  },
+  {
+    "Name": "Physics Unit Test",
+    "ExamDate": "2025-01-17T08:00:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 3,
+    "GradeId": 2,
+    "ClassId": 3
+  },
+  {
+    "Name": "Organic Chemistry Basics",
+    "ExamDate": "2025-01-18T11:00:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 4,
+    "GradeId": 3,
+    "ClassId": 5
+  },
+  {
+    "Name": "Biology Lab Assessment",
+    "ExamDate": "2025-01-19T09:00:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 5,
+    "GradeId": 4,
+    "ClassId": 7
+  },
+  {
+    "Name": "World History Midterm",
+    "ExamDate": "2025-01-20T13:00:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 6,
+    "GradeId": 5,
+    "ClassId": 9
+  },
+  {
+    "Name": "Geography Map Test",
+    "ExamDate": "2025-01-21T10:00:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 7,
+    "GradeId": 6,
+    "ClassId": 11
+  },
+  {
+    "Name": "Programming Fundamentals",
+    "ExamDate": "2025-01-22T08:30:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 8,
+    "GradeId": 7,
+    "ClassId": 13
+  },
+  {
+    "Name": "Art History Final",
+    "ExamDate": "2025-01-23T12:00:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 9,
+    "GradeId": 8,
+    "ClassId": 15
+  },
+  {
+    "Name": "Anatomy Basics",
+    "ExamDate": "2025-01-24T09:00:00",
+    "MaxScore": 100,
+    "PassScore": 50,
+    "SubjectId": 10,
+    "GradeId": 9,
+    "ClassId": 17
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "FullName": "Mona Amr",
+    "DateOfBirth": "2015-05-12T00:00:00",
+    "Gender": "Female",
+    "EnrollmentDate": "2021-09-01T00:00:00",
+    "GradeId": 1,
+    "ClassId": 1,
+    "ParentId": 1,
+    "UserId": "f7g8h9i0-j1k2-43l4-m5n6-o7p8q9r0s1t2"
+  },
+  {
+    "FullName": "Youssef Ibrahim",
+    "DateOfBirth": "2014-03-22T00:00:00",
+    "Gender": "Male",
+    "EnrollmentDate": "2020-09-01T00:00:00",
+    "GradeId": 2,
+    "ClassId": 3,
+    "ParentId": 2,
+    "UserId": "y5z6a7b8-c9d0-41e2-f3g4-h5i6j7k8l9m0"
+  },
+  {
+    "FullName": "Nour Elabd",
+    "DateOfBirth": "2013-11-10T00:00:00",
+    "Gender": "Female",
+    "EnrollmentDate": "2019-09-01T00:00:00",
+    "GradeId": 3,
+    "ClassId": 5,
+    "ParentId": 3,
+    "UserId": "r3s4t5u6-v7w8-49x0-y1z2-a3b4c5d6e7f8"
+  },
+  {
+    "FullName": "Hany Saad",
+    "DateOfBirth": "2012-07-05T00:00:00",
+    "Gender": "Male",
+    "EnrollmentDate": "2018-09-01T00:00:00",
+    "GradeId": 4,
+    "ClassId": 7,
+    "ParentId": 4,
+    "UserId": "k1l2m3n4-o5p6-47q8-r9s0-t1u2v3w4x5y6"
+  },
+  {
+    "FullName": "Habiba Said",
+    "DateOfBirth": "2011-01-30T00:00:00",
+    "Gender": "Female",
+    "EnrollmentDate": "2017-09-01T00:00:00",
+    "GradeId": 5,
+    "ClassId": 9,
+    "ParentId": 5,
+    "UserId": "d9e0f1g2-h3i4-45j6-k7l8-m9n0o1p2q3r4"
+  },
+  {
+    "FullName": "Ibrahim Salem",
+    "DateOfBirth": "2010-08-15T00:00:00",
+    "Gender": "Male",
+    "EnrollmentDate": "2016-09-01T00:00:00",
+    "GradeId": 6,
+    "ClassId": 11,
+    "ParentId": 6,
+    "UserId": "w7x8y9z0-a1b2-43c4-d5e6-f7g8h9i0j1k2"
+  },
+  {
+    "FullName": "Salma Helmy",
+    "DateOfBirth": "2009-04-18T00:00:00",
+    "Gender": "Female",
+    "EnrollmentDate": "2015-09-01T00:00:00",
+    "GradeId": 7,
+    "ClassId": 13,
+    "ParentId": 7,
+    "UserId": "p5q6r7s8-t9u0-41v2-w3x4-y5z6a7b8c9d0"
+  },
+  {
+    "FullName": "Adam Essam",
+    "DateOfBirth": "2008-12-02T00:00:00",
+    "Gender": "Male",
+    "EnrollmentDate": "2014-09-01T00:00:00",
+    "GradeId": 8,
+    "ClassId": 15,
+    "ParentId": 8,
+    "UserId": "i3j4k5l6-m7n8-49o0-p1q2-r3s4t5u6v7w8"
+  },
+  {
+    "FullName": "Rana Gamal",
+    "DateOfBirth": "2007-06-25T00:00:00",
+    "Gender": "Female",
+    "EnrollmentDate": "2013-09-01T00:00:00",
+    "GradeId": 9,
+    "ClassId": 17,
+    "ParentId": 9,
+    "UserId": "d1e2f3g4-h5i6-47j8-k9l0-m1n2o3p4q5r6"
+  },
+  {
+    "FullName": "Karim Fouad",
+    "DateOfBirth": "2006-10-14T00:00:00",
+    "Gender": "Male",
+    "EnrollmentDate": "2012-09-01T00:00:00",
+    "GradeId": 10,
+    "ClassId": 19,
+    "ParentId": 10,
+    "UserId": "w9x0y1z2-a3b4-45c6-d7e8-f9g0h1i2j3k4"
+  }
+]
