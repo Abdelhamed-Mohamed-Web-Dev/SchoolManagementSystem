@@ -1,4 +1,9 @@
-﻿namespace Service.MappingProfiles
+﻿using AutoMapper;
+using Domain.Entities;
+using Shared;
+using System.Linq;
+
+namespace Service.MappingProfiles
 {
 	public class AdminProfile : Profile
 	{
@@ -14,6 +19,10 @@
 			CreateMap<Parent, ParentDto>()
 				.ForMember(s => s.Students, opt => opt.MapFrom(d => d.ParentStudents.Select(n => n.Student.FullName)))
 				.ReverseMap();
+
+			// Map create/update DTOs to Parent
+			CreateMap<CreateParentDto, Parent>();
+			CreateMap<UpdateParentDto, Parent>();
 		}
 	}
 }
