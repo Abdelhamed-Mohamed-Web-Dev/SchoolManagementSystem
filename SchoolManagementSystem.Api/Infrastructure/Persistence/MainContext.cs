@@ -18,7 +18,7 @@ namespace Persistence
 		public DbSet<Class> Classes => Set<Class>();
 		public DbSet<Subject> Subjects => Set<Subject>();
 		public DbSet<TeacherSubject> TeacherSubjects => Set<TeacherSubject>();
-		public DbSet<Enrollment> Enrollments => Set<Enrollment>();
+		public DbSet<Grade> Grades => Set<Grade>();
 		public DbSet<Attendance> Attendances => Set<Attendance>();
 		public DbSet<Exam> Exams => Set<Exam>();
 		public DbSet<GradeResult> GradeResults => Set<GradeResult>();
@@ -28,21 +28,7 @@ namespace Persistence
 		
 			base.OnModelCreating(modelBuilder);
 
-			modelBuilder.Entity<ParentStudent>()
-				.HasKey(ps => new { ps.ParentId, ps.StudentId });
-
-			modelBuilder.Entity<ParentStudent>()
-				.HasOne(ps => ps.Parent)
-				.WithMany(p => p.ParentStudents)
-				.HasForeignKey(ps => ps.ParentId)
-				.OnDelete(DeleteBehavior.Restrict);
-
-			modelBuilder.Entity<ParentStudent>()
-				.HasOne(ps => ps.Student)
-				.WithMany(s => s.ParentStudents)
-				.HasForeignKey(ps => ps.StudentId)
-				.OnDelete(DeleteBehavior.Restrict);
-
+			
 			modelBuilder.Entity<Student>()
 				.HasOne(s => s.User)
 				.WithMany()
@@ -67,6 +53,35 @@ namespace Persistence
 				.HasForeignKey(s => s.UserId)
 				.OnDelete(DeleteBehavior.Restrict);
 
+			modelBuilder.Entity<Grade>()
+				.HasMany(g => g.Students)
+				.WithOne(s=> s.Grade)
+				.HasForeignKey(s => s.GradeId)
+				.OnDelete(DeleteBehavior.Restrict);
+
+			modelBuilder.Entity<Grade>()
+				.HasMany(g => g.Exams)
+				.WithOne(s=> s.Grade)
+				.HasForeignKey(s => s.GradeId)
+				.OnDelete(DeleteBehavior.Restrict);
+
+			modelBuilder.Entity<Grade>()
+				.HasMany(g => g.GradeResults)
+				.WithOne(s=> s.Grade)
+				.HasForeignKey(s => s.GradeId)
+				.OnDelete(DeleteBehavior.Restrict);
+
+			modelBuilder.Entity<Grade>()
+				.HasMany(g => g.Classes)
+				.WithOne(s=> s.Grade)
+				.HasForeignKey(s => s.GradeId)
+				.OnDelete(DeleteBehavior.Restrict);
+
+			modelBuilder.Entity<Student>()
+				.HasOne(s => s.Class)
+				.WithMany(c => c.Students)
+				.HasForeignKey(s => s.ClassId)
+				.OnDelete(DeleteBehavior.Restrict);
 
 		}
 	}

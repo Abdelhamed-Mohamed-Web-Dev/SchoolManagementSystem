@@ -6,9 +6,9 @@ namespace Service.ConcreteSpecifications
     {
         public ParentByIdSpecifications(int id) : base(p => p.Id == id)
         {
-            AddInclude(p => p.ParentStudents);
-            // include students for linking/unlinking operations
-            AddInclude(p => p.ParentStudents.Select(ps => ps.Student));
+            //AddInclude(p => p.ParentStudents);
+            //// include students for linking/unlinking operations
+            //AddInclude(p => p.ParentStudents.Select(ps => ps.Student));
         }
     }
 }

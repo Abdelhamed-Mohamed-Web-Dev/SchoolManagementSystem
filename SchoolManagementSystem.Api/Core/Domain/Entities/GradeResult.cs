@@ -12,6 +12,9 @@ namespace Domain.Entities
 		public int StudentId { get; set; }
 		public Student Student { get; set; } = new Student();
 
+		public int GradeId { get; set; }
+		public Grade Grade { get; set; } = new Grade();
+
 		public int Score { get; set; }
 	}
 

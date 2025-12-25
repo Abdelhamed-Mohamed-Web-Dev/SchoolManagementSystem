@@ -8,17 +8,17 @@ namespace Service.ConcreteSpecifications
 	public class ParentSpecifications : Specifications<Parent>
 	{
 		public ParentSpecifications(ParentsParams _params)
-			: base(p => (!_params.StudentId.HasValue || p.ParentStudents.Any(ps => _params.StudentId == ps.StudentId)) &&
+			: base(p => (!_params.StudentId.HasValue || p.Students.Any(s => _params.StudentId == s.Id)) &&
 					(string.IsNullOrWhiteSpace(_params.Search) || p.FullName.ToUpper().Contains(_params.Search!.ToUpper().Trim())))
 
 		{
-			AddInclude(p => p.ParentStudents);
+			AddInclude(p => p.Students);
 			ApplyPagination(_params.PageSize, _params.PageIndex);
 		}
 		public ParentSpecifications()
 			: base(null)
 		{
-			AddInclude(p => p.ParentStudents);
+			AddInclude(p => p.Students);
 		}
 	}
 }

@@ -84,16 +84,16 @@ namespace Service.StudentService
         }
 
         // 🟢 الكورسات اللي الطالب مسجل فيها
-        public async Task<IEnumerable<EnrollmentDto>> GetMyEnrollmentsAsync(int studentId)
+        public async Task<IEnumerable<ClassDto>> GetClassesAsync(int studentId)
         {
-            var enrollments = await unitOfWork
-                .GetRepository<Enrollment, int>()
+            var classes = await unitOfWork
+                .GetRepository<Class, int>()
                 .GetAllAsync();
 
-            var myEnrollments = enrollments
-                .Where(e => e.StudentId == studentId);
-
-            return mapper.Map<IEnumerable<EnrollmentDto>>(myEnrollments);
+            var studentClasses = classes
+                .Where(e => e.Students.Any(s=>s.Id == studentId));
+            ////////////////////////////////////////// mapping profile for class nedded
+            return mapper.Map<IEnumerable<ClassDto>>(studentClasses);
         }
 
         // 🟢 Attendance بتاع الطالب

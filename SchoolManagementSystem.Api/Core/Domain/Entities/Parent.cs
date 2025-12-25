@@ -8,10 +8,11 @@ namespace Domain.Entities
 	public class Parent :BaseEntity<int>
 	{
 		public string FullName { get; set; } 
+
 		public string UserId { get; set; }
 		public IdentityUser User { get; set; }
 
-		public ICollection<ParentStudent> ParentStudents { get; set; } = new List<ParentStudent>();
+		public ICollection<Student>Students { get; set; } = new List<Student>();
 	}
 
 }

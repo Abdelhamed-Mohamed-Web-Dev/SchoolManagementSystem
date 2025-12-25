@@ -41,43 +41,43 @@ namespace Service.AdminService
 
 		public async Task DeleteParentAsync(int id)
 		{
-			var parent = await unitOfWork.GetRepository<Parent, int>().GetAsync(id);
-			if (parent is null) throw new ParentNotFoundException(id);
-			// ensure not linked to students
-			var fullParent = await unitOfWork.GetRepository<Parent, int>().GetAsync(new ParentByIdSpecifications(id));
-			if (fullParent is not null && fullParent.ParentStudents.Any())
-				throw new ValidationException(new[] { "Cannot delete parent with linked students." });
-			unitOfWork.GetRepository<Parent, int>().Delete(parent);
-			await unitOfWork.SaveChangesAsync();
+			//var parent = await unitOfWork.GetRepository<Parent, int>().GetAsync(id);
+			//if (parent is null) throw new ParentNotFoundException(id);
+			//// ensure not linked to students
+			//var fullParent = await unitOfWork.GetRepository<Parent, int>().GetAsync(new ParentByIdSpecifications(id));
+			//if (fullParent is not null && fullParent.ParentStudents.Any())
+			//	throw new ValidationException(new[] { "Cannot delete parent with linked students." });
+			//unitOfWork.GetRepository<Parent, int>().Delete(parent);
+			//await unitOfWork.SaveChangesAsync();
 		}
 
 		public async Task LinkParentToStudentAsync(int parentId, int studentId)
 		{
-			var parent = await unitOfWork.GetRepository<Parent, int>().GetAsync(new ParentByIdSpecifications(parentId));
-			if (parent is null) throw new ParentNotFoundException(parentId);
+			//var parent = await unitOfWork.GetRepository<Parent, int>().GetAsync(new ParentByIdSpecifications(parentId));
+			//if (parent is null) throw new ParentNotFoundException(parentId);
 
-			var student = await unitOfWork.GetRepository<Student, int>().GetAsync(studentId);
-			if (student is null) throw new StudentNotFoundException(studentId);
+			//var student = await unitOfWork.GetRepository<Student, int>().GetAsync(studentId);
+			//if (student is null) throw new StudentNotFoundException(studentId);
 
-			if (parent.ParentStudents.Any(ps => ps.StudentId == studentId))
-				return; // already linked
+			//if (parent.ParentStudents.Any(ps => ps.StudentId == studentId))
+			//	return; // already linked
 
-			parent.ParentStudents.Add(new ParentStudent { ParentId = parentId, StudentId = studentId });
-			unitOfWork.GetRepository<Parent, int>().Update(parent);
-			await unitOfWork.SaveChangesAsync();
+			//parent.ParentStudents.Add(new ParentStudent { ParentId = parentId, StudentId = studentId });
+			//unitOfWork.GetRepository<Parent, int>().Update(parent);
+			//await unitOfWork.SaveChangesAsync();
 		}
 
 		public async Task UnlinkParentFromStudentAsync(int parentId, int studentId)
 		{
-			var parent = await unitOfWork.GetRepository<Parent, int>().GetAsync(new ParentByIdSpecifications(parentId));
-			if (parent is null) throw new ParentNotFoundException(parentId);
+			//var parent = await unitOfWork.GetRepository<Parent, int>().GetAsync(new ParentByIdSpecifications(parentId));
+			//if (parent is null) throw new ParentNotFoundException(parentId);
 
-			var link = parent.ParentStudents.FirstOrDefault(ps => ps.StudentId == studentId);
-			if (link is null) return; // no-op
+			//var link = parent.ParentStudents.FirstOrDefault(ps => ps.StudentId == studentId);
+			//if (link is null) return; // no-op
 
-			parent.ParentStudents.Remove(link);
-			unitOfWork.GetRepository<Parent, int>().Update(parent);
-			await unitOfWork.SaveChangesAsync();
+			//parent.ParentStudents.Remove(link);
+			//unitOfWork.GetRepository<Parent, int>().Update(parent);
+			//await unitOfWork.SaveChangesAsync();
 		}
 
 		public async Task<StudentDto> GetStudentByIdAsync(int id)

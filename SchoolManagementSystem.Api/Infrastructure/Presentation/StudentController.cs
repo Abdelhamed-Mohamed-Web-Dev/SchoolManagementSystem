@@ -75,10 +75,10 @@ namespace Presentation.Controllers
         }
 
         // GET: api/students/{studentId}/enrollments
-        [HttpGet("{studentId:int}/enrollments")]
-        public async Task<IActionResult> GetMyEnrollments(int studentId)
+        [HttpGet("{studentId:int}/classes")]
+        public async Task<IActionResult> GetClasses(int studentId)
         {
-            var enrollments = await studentService.GetMyEnrollmentsAsync(studentId);
+            var enrollments = await studentService.GetClassesAsync(studentId);
             return Ok(enrollments);
         }
 
