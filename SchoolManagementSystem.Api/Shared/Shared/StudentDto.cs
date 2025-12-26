@@ -13,7 +13,7 @@ namespace Shared
 		public string Grade { get; set; }
 		public DateTime EnrollmentDate { get; set; }
 		public string Email { get; set; }
-		public IEnumerable<string> Parents { get; set; }
-		public IEnumerable<string> Classes { get; set; }
+		public string Parent { get; set; }
+		public string Class { get; set; }
 	}
 }

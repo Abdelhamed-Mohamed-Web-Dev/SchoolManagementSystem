@@ -24,6 +24,8 @@ namespace Persistence.Contracts
 		public async Task<IEnumerable<TEntity>> GetAllAsync()
 		=> await mainContext.Set<TEntity>().ToListAsync();
 
+		public async Task<int> CountAsync()
+		=> await mainContext.Set<TEntity>().CountAsync();
 
 		#region With Specifications
 		public async Task<TEntity?> GetAsync(Specifications<TEntity> specifications)
@@ -31,9 +33,6 @@ namespace Persistence.Contracts
 
 		public async Task<IEnumerable<TEntity>> GetAllAsync(Specifications<TEntity> specifications)
 			=> await ApplySpecification(specifications).ToListAsync();
-
-		public async Task<int> CountAsync(Specifications<TEntity> specifications)
-			=> await ApplySpecification(specifications).CountAsync();
 
 		private IQueryable<TEntity> ApplySpecification(Specifications<TEntity> specifications)
 			=> SpecificationEvaluator.QueryBuilder<TEntity>(mainContext.Set<TEntity>(), specifications);

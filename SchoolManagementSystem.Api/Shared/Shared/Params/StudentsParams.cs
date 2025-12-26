@@ -7,7 +7,10 @@ namespace Shared.Params
 	public class StudentsParams
 	{
 		// filter
-
+		public int? GradeId { get; set; }
+		public int? ParentId { get; set; }
+		public int? ClassId { get; set; }
+		public string? Gender { get; set; }
 
 		// pagination
 		const int MaxSize = 10;

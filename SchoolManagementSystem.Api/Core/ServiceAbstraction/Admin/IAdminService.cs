@@ -9,16 +9,21 @@ namespace ServiceAbstraction.Admin
 {
 	public interface IAdminService
 	{
-		Task<IEnumerable<StudentDto>> GetStudentsAsync(StudentsParams _params);
-		Task<StudentDto> GetStudentByIdAsync(int id);
 		Task<IEnumerable<TeacherDto>> GetTeachersAsync(TeachersParams _params);
 		Task<TeacherDto> GetTeacherByIdAsync(int id);
+		#region Parent
 		Task<PaginatedResultDto<ParentDto>> GetParentsAsync(ParentsParams _params);
 		Task<ParentDto> GetParentByIdAsync(int id);
 		Task<ParentDto> CreateParentAsync(CreateParentDto dto);
-		Task UpdateParentAsync(int id, UpdateParentDto dto);
-		Task DeleteParentAsync(int id);
-		Task LinkParentToStudentAsync(int parentId, int studentId);
-		Task UnlinkParentFromStudentAsync(int parentId, int studentId);
+		Task<string> UpdateParentAsync(UpdateParentDto dto);
+		Task<string> DeleteParentAsync(int id);
+		#endregion
+
+		#region Student
+		Task<PaginatedResultDto<StudentDto>> GetStudentsAsync(StudentsParams _params);
+		Task<StudentDto> GetStudentByIdAsync(int id);
+		Task<StudentDto> CreateStudentAsync(CreateStudentDto dto);
+		Task<string> UpdateStudentAsync(UpdateStudentDto dto);
+		#endregion
 	}
 }

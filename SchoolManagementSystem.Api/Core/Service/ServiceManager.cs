@@ -16,7 +16,7 @@ namespace Service
 
 		public ServiceManger(IUnitOfWork unitOfWork,IMapper mapper,UserManager<IdentityUser> userManager,IConfiguration configuration)
 		{
-			adminService = new Lazy<IAdminService>(() => new AdminService.AdminService(unitOfWork,mapper));
+			adminService = new Lazy<IAdminService>(() => new AdminService.AdminService(unitOfWork,mapper,userManager));
 			studentService = new Lazy<IStudentService>(() => new StudentService.StudentService( unitOfWork, mapper));
 			authenticationService = new Lazy<IAuthenticationService>(() => new AuthenticationService(userManager, unitOfWork, mapper, configuration));
 		}

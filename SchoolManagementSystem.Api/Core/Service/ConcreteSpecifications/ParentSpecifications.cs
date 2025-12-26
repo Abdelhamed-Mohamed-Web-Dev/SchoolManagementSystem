@@ -13,11 +13,13 @@ namespace Service.ConcreteSpecifications
 
 		{
 			AddInclude(p => p.Students);
+			AddInclude(p => p.User);
 			ApplyPagination(_params.PageSize, _params.PageIndex);
 		}
-		public ParentSpecifications()
-			: base(null)
+		public ParentSpecifications(int id)
+			: base(p=>p.Id == id)
 		{
+			AddInclude(p => p.User);
 			AddInclude(p => p.Students);
 		}
 	}
