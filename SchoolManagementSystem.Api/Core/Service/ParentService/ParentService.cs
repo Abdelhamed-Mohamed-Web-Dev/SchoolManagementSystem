@@ -1,28 +1,28 @@
-﻿using Domain.Exceptions.NotFoundExceptions;
+using Domain.Exceptions.NotFoundExceptions;
+using Domain.Exceptions;
+using System.Linq;
+using Service.ConcreteSpecifications;
 using Shared.Params;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using AutoMapper;
-using System;
+using ServiceAbstraction.Parent;
 
-namespace Service.AdminService
+namespace Service.ParentService
 {
-	public class AdminService(IUnitOfWork unitOfWork, IMapper mapper) : IAdminService
+	public class ParentService(IUnitOfWork unitOfWork, IMapper mapper) : IParentService
 	{
-		public async Task<ParentDto> GetParentByIdAsync(int id)
-		{
-			var parent = await unitOfWork.GetRepository<Parent, int>().GetAsync(id);
-			return parent is not null
-				? mapper.Map<ParentDto>(parent)
-				: throw new ParentNotFoundException(id);
-		}
-
 		public async Task<PaginatedResultDto<ParentDto>> GetParentsAsync(ParentsParams _params)
 		{
 			var parents = await unitOfWork.GetRepository<Parent, int>().GetAllAsync(new ParentSpecifications(_params));
 			var dto = mapper.Map<IEnumerable<ParentDto>>(parents);
 			var total = await unitOfWork.GetRepository<Parent, int>().CountAsync(new ParentSpecifications());
 			return new PaginatedResultDto<ParentDto>(dto.Count(), _params.PageIndex, total, dto);
+		}
+
+		public async Task<ParentDto> GetParentByIdAsync(int id)
+		{
+			var parent = await unitOfWork.GetRepository<Parent, int>().GetAsync(id);
+			return parent is not null
+				? mapper.Map<ParentDto>(parent)
+				: throw new ParentNotFoundException(id);
 		}
 
 		public async Task<ParentDto> CreateParentAsync(CreateParentDto dto)
@@ -81,32 +81,6 @@ namespace Service.AdminService
 			parent.ParentStudents.Remove(link);
 			unitOfWork.GetRepository<Parent, int>().Update(parent);
 			await unitOfWork.SaveChangesAsync();
-		}
-
-		public async Task<StudentDto> GetStudentByIdAsync(int id)
-		{
-			var student = await unitOfWork.GetRepository<Student, int>().GetAsync(id);
-			return student is not null
-				? mapper.Map<StudentDto>(student)
-				: throw new StudentNotFoundException(id);
-		}
-
-		public Task<IEnumerable<StudentDto>> GetStudentsAsync(StudentsParams _params)
-		{
-			throw new NotImplementedException();
-		}
-
-		public async Task<TeacherDto> GetTeacherByIdAsync(int id)
-		{
-			var teacher = await unitOfWork.GetRepository<Teacher, int>().GetAsync(id);
-			return teacher is not null
-				? mapper.Map<TeacherDto>(teacher)
-				: throw new TeacherNotFoundException(id);
-		}
-
-		public Task<IEnumerable<TeacherDto>> GetTeachersAsync(TeachersParams _params)
-		{
-			throw new NotImplementedException();
 		}
 	}
 }
