@@ -24,6 +24,7 @@ namespace Service.StudentService
 
         public async Task<IEnumerable<StudentDto>> GetAllAsync()
         {
+
             var students = await unitOfWork
                 .GetRepository<Student, int>()
                 .GetAllAsync();

@@ -23,7 +23,9 @@ namespace Persistence
 		public DbSet<Exam> Exams => Set<Exam>();
 		public DbSet<GradeResult> GradeResults => Set<GradeResult>();
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        public DbSet<Enrollment> Enrollments => Set<Enrollment>();
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 		
 			base.OnModelCreating(modelBuilder);
