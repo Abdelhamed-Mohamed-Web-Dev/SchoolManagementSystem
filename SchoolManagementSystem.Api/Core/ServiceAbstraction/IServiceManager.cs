@@ -1,4 +1,5 @@
 ﻿using ServiceAbstraction.Admin;
+using ServiceAbstraction.Teacher;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,5 +12,6 @@ namespace ServiceAbstraction
 		public IStudentService StudentService { get; }
 		public IAuthenticationService AuthenticationService { get; }
 		public IParentService ParentService { get; }
+		public ITeacherService TeacherService { get; }
 	}
 }
