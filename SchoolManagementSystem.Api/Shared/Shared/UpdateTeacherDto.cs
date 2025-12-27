@@ -4,14 +4,12 @@ using System.Text;
 
 namespace Shared
 {
-	public record TeacherDto
+	public record UpdateTeacherDto
 	{
 		public int Id { get; set; }
 		public string FullName { get; set; }
 		public string Specialization { get; set; }
-		public DateTime HireDate { get; set; }
-		public string Email { get; set; }
-		public IEnumerable<string> Subjects { get; set; }
-		public IEnumerable<string> Classes { get; set; }
+		public List<int> SubjectIds { get; set; }
+		public List<int> ClassIds { get; set; }
 	}
 }

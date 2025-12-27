@@ -9,8 +9,13 @@ namespace ServiceAbstraction.Admin
 {
 	public interface IAdminService
 	{
-		Task<IEnumerable<TeacherDto>> GetTeachersAsync(TeachersParams _params);
+		#region Teacher
+		Task<PaginatedResultDto<TeacherDto>> GetTeachersAsync(TeachersParams _params);
 		Task<TeacherDto> GetTeacherByIdAsync(int id);
+		Task<TeacherDto> CreateTeacherAsync(CreateTeacherDto dto);
+		Task<string> UpdateTeacherAsync(UpdateTeacherDto dto);
+		#endregion
+
 		#region Parent
 		Task<PaginatedResultDto<ParentDto>> GetParentsAsync(ParentsParams _params);
 		Task<ParentDto> GetParentByIdAsync(int id);

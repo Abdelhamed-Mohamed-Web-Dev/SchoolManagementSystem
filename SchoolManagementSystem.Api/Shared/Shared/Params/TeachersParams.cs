@@ -7,7 +7,9 @@ namespace Shared.Params
 	public class TeachersParams
 	{
 		// filter
+		public int? SubjectId { get; set; }
 		public int? ClassId { get; set; }
+		public string? Specialization { get; set; }
 		// pagination
 		const int MaxSize = 10;
 		const int DefaultSize = 5;

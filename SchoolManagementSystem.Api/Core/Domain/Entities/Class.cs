@@ -13,7 +13,8 @@ namespace Domain.Entities
 		public Grade Grade { get; set; }
 
 		public ICollection<Student> Students { get; set; }
-		public ICollection<TeacherSubject> TeacherSubjects { get; set; }
+		public ICollection<ClassSubject> ClassSubjects { get; set; }
+		public ICollection<ClassTeacher> ClassTeachers { get; set; }
 		public ICollection<Attendance> Attendances { get; set; }
 		public ICollection<Exam> Exams { get; set; } 
 	}

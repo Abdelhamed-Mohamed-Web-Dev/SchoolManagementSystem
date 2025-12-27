@@ -14,6 +14,7 @@ namespace Domain.Entities
 		public IdentityUser User { get; set; }
 
 		public ICollection<TeacherSubject> TeacherSubjects { get; set; } 
+		public ICollection<ClassTeacher> TeacherClasses { get; set; } 
 	}
 
 }

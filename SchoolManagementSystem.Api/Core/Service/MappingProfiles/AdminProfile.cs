@@ -11,6 +11,7 @@ namespace Service.MappingProfiles
 		{
 			CreateMap<Teacher, TeacherDto>()
 				.ForMember(s => s.Subjects, opt => opt.MapFrom(d => d.TeacherSubjects.Select(n => n.Subject.Name)))
+				.ForMember(s => s.Classes, opt => opt.MapFrom(d => d.TeacherClasses.Select(n => n.Class.Name)))
 				.ForMember(s => s.Email, opt => opt.MapFrom(d => d.User.Email))
 				.ReverseMap();
 
@@ -38,7 +39,7 @@ namespace Service.MappingProfiles
 			CreateMap<Class, ClassDto>()
 				.ForMember(d => d.Grade, opt => opt.MapFrom(s => s.Grade.Name))
 				.ForMember(d => d.Students, opt => opt.MapFrom(s => s.Students.Select(s => s.FullName)))
-				.ForMember(d => d.Subjects, opt => opt.MapFrom(s => s.TeacherSubjects.Select(s => s.Subject.Name)))
+				.ForMember(d => d.Teachers, opt => opt.MapFrom(s => s.ClassTeachers.Select(s => s.Teacher.FullName)))
 				.ForMember(d => d.Exams, opt => opt.MapFrom(s => s.Exams.Select(s => s.Name)))
 				.ReverseMap();
 

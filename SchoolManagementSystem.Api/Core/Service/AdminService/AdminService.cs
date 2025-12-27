@@ -164,16 +164,66 @@ namespace Service.AdminService
 
 		public async Task<TeacherDto> GetTeacherByIdAsync(int id)
 		{
-			var teacher = await unitOfWork.GetRepository<Teacher, int>().GetAsync(id);
+			var teacher = await unitOfWork.GetRepository<Teacher, int>().GetAsync(new TeacherSpecifications(id));
 			return teacher is not null
 				? mapper.Map<TeacherDto>(teacher)
 				: throw new TeacherNotFoundException(id);
 		}
 
-		public Task<IEnumerable<TeacherDto>> GetTeachersAsync(TeachersParams _params)
+		public async Task<PaginatedResultDto<TeacherDto>> GetTeachersAsync(TeachersParams _params)
 		{
-			throw new NotImplementedException();
+			var teachers = await unitOfWork.GetRepository<Teacher, int>().GetAllAsync(new TeacherSpecifications(_params));
+			var dto = mapper.Map<IEnumerable<TeacherDto>>(teachers);
+			var total = await unitOfWork.GetRepository<Parent, int>().CountAsync();
+			return new PaginatedResultDto<TeacherDto>(dto.Count(), _params.PageIndex, total, dto);
 		}
 
+		public async Task<TeacherDto> CreateTeacherAsync(CreateTeacherDto dto)
+		{
+			var _user = new IdentityUser()
+			{
+				Id = Guid.NewGuid().ToString(),
+				Email = dto.Email,
+				UserName = dto.UserName
+			};
+			await userManager.CreateAsync(_user, "Pa$5word");
+			await userManager.AddToRoleAsync(_user, "Teacher");
+
+			var teacher = new Teacher()
+			{
+				FullName = dto.FullName,
+				Specialization = dto.Specialization,
+				HireDate = DateTime.UtcNow,
+				UserId = _user.Id,
+			};
+			await unitOfWork.GetRepository<Teacher, int>().AddAsync(teacher);
+			await unitOfWork.SaveChangesAsync();
+			return mapper.Map<TeacherDto>(teacher);
+		}
+
+		public async Task<string> UpdateTeacherAsync(UpdateTeacherDto dto)
+		{
+			if (dto.ClassIds.Any())
+				foreach (var item in dto.ClassIds)
+				{
+					var _class = await unitOfWork.GetRepository<Class, int>().GetAsync(item);
+					if (_class is null) throw new ClassNotFoundException(item);
+				}
+			if (dto.SubjectIds.Any())
+				foreach (var item in dto.SubjectIds)
+				{
+					var _subject = await unitOfWork.GetRepository<Subject, int>().GetAsync(item);
+					if (_subject is null) throw new SubjectNotFoundException(item);
+				}
+					var _teacher = await unitOfWork.GetRepository<Teacher, int>().GetAsync(dto.Id);
+			if (_teacher is null) throw new TeacherNotFoundException(dto.Id);
+			_teacher.FullName = dto.FullName;
+			_teacher.Specialization = dto.Specialization;
+			
+			//var links = await unitOfWork.GetRepository<TeacherSubject, int>().AddAsync()
+				
+
+			return "";
+		}
 	}
 }

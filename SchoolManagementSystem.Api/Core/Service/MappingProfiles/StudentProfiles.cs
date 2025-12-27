@@ -31,7 +31,8 @@ namespace Service.MappingProfiles
 
                 .ForMember(d => d.Students, opt => opt.MapFrom(s => s.Students.Select(s => s.FullName)))
 
-                .ForMember(d => d.Subjects, opt => opt.MapFrom(s => s.TeacherSubjects.Select(s => s.Subject.Name)))
+                .ForMember(d => d.Subjects, opt => opt.MapFrom(s => s.ClassSubjects.Select(s => s.Subject.Name)))
+                .ForMember(d => d.Teachers, opt => opt.MapFrom(s => s.ClassTeachers.Select(s => s.Teacher.FullName)))
 
                 .ForMember(d => d.Exams, opt => opt.MapFrom(s => s.Exams.Select(s => s.Name)))
                 .ReverseMap();
@@ -40,15 +41,15 @@ namespace Service.MappingProfiles
             //me
             CreateMap<Attendance, AttendanceDto>()
                 .ForMember(d => d.IsPresent, opt => opt.MapFrom(s => s.Status == "Present"))
-                .ForMember(d => d.SubjectName, opt => opt.MapFrom(s => s.Class.TeacherSubjects.Select(s => s.Subject.Name)))
+                .ForMember(d => d.SubjectName, opt => opt.MapFrom(s => s.Class.ClassSubjects.Select(s => s.Subject.Name)))
                 .ReverseMap();
 
           
 
             //me
             CreateMap<Enrollment, EnrollmentDto>()
-                .ForMember(d => d.SubjectId, opt => opt.MapFrom(s => s.Class.TeacherSubjects.Select(s => s.Subject.Id)))
-                .ForMember(d => d.SubjectName, opt => opt.MapFrom(s => s.Class.TeacherSubjects.Select(s => s.Subject.Name)))
+                .ForMember(d => d.SubjectId, opt => opt.MapFrom(s => s.Class.ClassSubjects.Select(s => s.Subject.Id)))
+                .ForMember(d => d.SubjectName, opt => opt.MapFrom(s => s.Class.ClassSubjects.Select(s => s.Subject.Name)))
                 .ForMember(d => d.EnrollmentDate, opt => opt.MapFrom(s => s.Student.EnrollmentDate))
                 .ReverseMap();
 

@@ -12,6 +12,7 @@ namespace Shared
 
 		public string Grade { get; set; }
 		public ICollection<string> Students { get; set; } 
+		public ICollection<string> Teachers { get; set; }
 		public ICollection<string> Subjects { get; set; }
 		public ICollection<string> Exams { get; set; } 
 	}
