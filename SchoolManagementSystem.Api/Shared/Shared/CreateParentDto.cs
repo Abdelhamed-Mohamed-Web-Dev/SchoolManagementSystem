@@ -1,16 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
 
 namespace Shared
 {
-    public record CreateParentDto
-    {
-        [Required]
-        [StringLength(100, MinimumLength = 2)]
-        public string FullName { get; set; }
-        // optional: associate with existing identity user
-        public string? UserId { get; set; }
-    }
+	public record CreateParentDto
+	{
+		[EmailAddress]
+		public string Email { get; set; }
+		public string UserName { get; set; }
+		public string PhoneNumber { get; set; }
+
+		public string FullName { get; set; }
+	}
 }

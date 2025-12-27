@@ -34,9 +34,9 @@ namespace Presentation
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Update(int id, [FromBody] UpdateParentDto dto)
+        public async Task<IActionResult> Update([FromBody] UpdateParentDto dto)
         {
-            await serviceManager.ParentService.UpdateParentAsync(id, dto);
+            await serviceManager.ParentService.UpdateParentAsync( dto);
             return NoContent();
         }
 
@@ -56,12 +56,12 @@ namespace Presentation
             return NoContent();
         }
 
-        [HttpDelete("{parentId}/students/{studentId}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UnlinkStudent(int parentId, int studentId)
-        {
-            await serviceManager.ParentService.UnlinkParentFromStudentAsync(parentId, studentId);
-            return NoContent();
-        }
+        //[HttpDelete("{parentId}/students/{studentId}")]
+        //[Authorize(Roles = "Admin")]
+        //public async Task<IActionResult> UnlinkStudent(int parentId, int studentId)
+        //{
+        //    await serviceManager.ParentService.UnlinkParentFromStudentAsync(parentId, studentId);
+        //    return NoContent();
+        //}
     }
 }

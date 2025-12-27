@@ -1,32 +1,33 @@
-﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Shared.Params;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
 
 namespace Service.ConcreteSpecifications
 {
-    public static class StudentSpecifications
-    {
-        // 🔹 Specification: Get all students with needed includes
-        public static Func<IQueryable<Student>, IQueryable<Student>> WithDetails()
-        {
-            return query => query
-                .Include(s => s.Grade)
-                .Include(s => s.User)
-                .Include(s => s.Parent)
-                .Include(s => s.Class);
-        }
+	public class StudentSpecifications : Specifications<Student>
+	{
+		public StudentSpecifications(StudentsParams _params)
+		: base(p => (!_params.GradeId.HasValue || p.GradeId == _params.GradeId) &&
+					(!_params.ClassId.HasValue || p.ClassId == _params.ClassId) &&
+					(!_params.ParentId.HasValue || p.ParentId == _params.ParentId) &&
+					(string.IsNullOrWhiteSpace(_params.Gender) || p.Gender.ToUpper() == _params.Gender.ToUpper()) &&
+					(string.IsNullOrWhiteSpace(_params.Search) || p.FullName.ToUpper().Contains(_params.Search!.ToUpper().Trim())))
 
-        // 🔹 Specification: Get student by id with details
-        public static Func<IQueryable<Student>, IQueryable<Student>> ByIdWithDetails(int id)
-        {
-            return query => query
-                .Where(s => s.Id == id)
-                .Include(s => s.Grade)
-                .Include(s => s.User)
-                .Include(s => s.Parent)
-                .Include(s => s.Class);
-        }
-    }
+		{
+			AddInclude(p => p.User);
+			AddInclude(p => p.Parent);
+			AddInclude(p => p.Class);
+			AddInclude(p => p.Grade);
+			ApplyPagination(_params.PageSize, _params.PageIndex);
+		}
+		public StudentSpecifications(int id)
+			: base(s => s.Id == id)
+		{
+			AddInclude(p => p.User);
+			AddInclude(p => p.Parent);
+			AddInclude(p => p.Class);
+			AddInclude(p => p.Grade);
+		}
+	}
 }

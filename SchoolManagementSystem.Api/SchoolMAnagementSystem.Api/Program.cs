@@ -46,11 +46,11 @@ namespace SchoolMAnagementSystem.Api
 			await app.DataSeeding();
 
 			// Configure the HTTP request pipeline.
-			if (app.Environment.IsDevelopment())
-			{
-				app.MapOpenApi();
+			//if (app.Environment.IsDevelopment())
+			//{
+			//	app.MapOpenApi();
 
-			}
+			//}
 			app.UseSwagger();
 			app.UseSwaggerUI();
 
