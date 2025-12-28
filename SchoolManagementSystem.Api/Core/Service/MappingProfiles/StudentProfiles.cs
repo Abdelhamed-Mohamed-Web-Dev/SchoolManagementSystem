@@ -18,7 +18,7 @@ namespace Service.MappingProfiles
 
             CreateMap<Student, StudentDto>()
                 .ForMember(d => d.Grade, opt => opt.MapFrom(s => s.Grade.Name))
-                .ForMember(s => s.Email, opt => opt.MapFrom(d => d.User.Email))//فين كلاس ال user
+                .ForMember(s => s.Email, opt => opt.MapFrom(d => d.User.Email))
                 .ForMember(s => s.Parent, opt => opt.MapFrom(d => d.Parent.FullName))
                 .ForMember(s => s.Class, opt => opt.MapFrom(d => d.Class.Name))
                 .ReverseMap();

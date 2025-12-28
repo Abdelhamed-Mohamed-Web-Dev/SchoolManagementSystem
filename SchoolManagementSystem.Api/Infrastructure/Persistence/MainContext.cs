@@ -17,9 +17,13 @@ namespace Persistence
 
 		public DbSet<Class> Classes => Set<Class>();
 		public DbSet<Subject> Subjects => Set<Subject>();
-		//public DbSet<TeacherSubject> TeacherSubjects => Set<TeacherSubject>();
-		//public DbSet<ClassTeacher> TeacherClasses => Set<ClassTeacher>();
-		public DbSet<Grade> Grades => Set<Grade>();
+        //public DbSet<TeacherSubject> TeacherSubjects => Set<TeacherSubject>();
+        //public DbSet<ClassTeacher> TeacherClasses => Set<ClassTeacher>();
+
+        public DbSet<TeacherSubject> TeacherSubjects { get; set; }
+
+        public DbSet<Grade> Grades => Set<Grade>();
+
 		public DbSet<Attendance> Attendances => Set<Attendance>();
 		public DbSet<Exam> Exams => Set<Exam>();
 		public DbSet<GradeResult> GradeResults => Set<GradeResult>();
